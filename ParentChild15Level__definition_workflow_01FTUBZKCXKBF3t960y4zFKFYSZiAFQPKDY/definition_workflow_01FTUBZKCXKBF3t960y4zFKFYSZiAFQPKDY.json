@@ -1,0 +1,1095 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01FTUBZKCXKBF3t960y4zFKFYSZiAFQPKDY",
+    "name": "Child15",
+    "title": "Child15",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "test",
+          "scope": "input",
+          "name": "input-str",
+          "type": "datatype.string",
+          "is_required": true
+        },
+        "unique_name": "variable_workflow_01FTUBZFB2HWD4TdnJDdgJxjcRZAupJrDFn",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Child15",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": false,
+        "execute_on_workflow_target": false,
+        "no_target": true,
+        "specify_on_workflow_start": false
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01FTUC12KGX7W0SRUq9iAkBrHQajXk1mIk1",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "$workflow.definition_workflow_01FTUBZKCXKBF3t960y4zFKFYSZiAFQPKDY.input.variable_workflow_01FTUBZFB2HWD4TdnJDdgJxjcRZAupJrDFn$"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FTUIXVYQ88P3ssN8xCZddDsbvNhb8icxP",
+        "name": "Child14",
+        "title": "Child14",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Child14",
+          "input": {
+            "variable_workflow_01FTUBT1OEGGE1ydQFbKOKpQ2ZN4BJte9fc": "test$activity.definition_activity_01FTUC12KGX7W0SRUq9iAkBrHQajXk1mIk1.output.uppercase_text$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_01FTUBT25L93Q3OUGHW64arrSBAnej6ZO4M"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_01FTUBT25L93Q3OUGHW64arrSBAnej6ZO4M",
+        "name": "Child14",
+        "title": "Child14",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": [
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "test",
+              "scope": "input",
+              "name": "input-str",
+              "type": "datatype.string",
+              "is_required": true
+            },
+            "unique_name": "variable_workflow_01FTUBT1OEGGE1ydQFbKOKpQ2ZN4BJte9fc",
+            "object_type": "variable_workflow"
+          }
+        ],
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "Child14",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "specify_on_workflow_start": false,
+            "target_default": true
+          },
+          "target": {
+            "execute_on_target_group": false,
+            "execute_on_workflow_target": false,
+            "no_target": true,
+            "specify_on_workflow_start": false
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01FTUIQ1NEMJC61eDrfDsdvKPE4Bdda8jrc",
+            "name": "Child13",
+            "title": "Child13",
+            "type": "workflow.sub_workflow",
+            "base_type": "subworkflow",
+            "properties": {
+              "display_name": "Child13",
+              "input": {
+                "variable_workflow_01FTUBTYTKZW44TdwJ67BhyGI7rE2UVK5mc": "test"
+              },
+              "runtime_user": {
+                "target_default": true
+              },
+              "target": {
+                "no_target": true
+              },
+              "workflow_id": "definition_workflow_01FTUBTZ84JYO1Q0EhAPU201RbWX6Tkbpjf"
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      },
+      "subworkflows": [
+        {
+          "workflow": {
+            "unique_name": "definition_workflow_01FTUBTZ84JYO1Q0EhAPU201RbWX6Tkbpjf",
+            "name": "Child13",
+            "title": "Child13",
+            "type": "generic.workflow",
+            "base_type": "workflow",
+            "variables": [
+              {
+                "schema_id": "datatype.string",
+                "properties": {
+                  "value": "test",
+                  "scope": "input",
+                  "name": "input-str",
+                  "type": "datatype.string",
+                  "is_required": true
+                },
+                "unique_name": "variable_workflow_01FTUBTYTKZW44TdwJ67BhyGI7rE2UVK5mc",
+                "object_type": "variable_workflow"
+              }
+            ],
+            "properties": {
+              "atomic": {
+                "is_atomic": false
+              },
+              "delete_workflow_instance": false,
+              "display_name": "Child13",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "specify_on_workflow_start": false,
+                "target_default": true
+              },
+              "target": {
+                "execute_on_target_group": false,
+                "execute_on_workflow_target": false,
+                "no_target": true,
+                "specify_on_workflow_start": false
+              }
+            },
+            "object_type": "definition_workflow",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01FTUBVGKNFGI1GUJUXkKimspRQLYiet4wr",
+                "name": "To Upper",
+                "title": "To Upper",
+                "type": "core.string2upper",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "To Upper",
+                  "skip_execution": false,
+                  "source": "$workflow.definition_workflow_01FTUBTZ84JYO1Q0EhAPU201RbWX6Tkbpjf.input.variable_workflow_01FTUBTYTKZW44TdwJ67BhyGI7rE2UVK5mc$"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01FTUIBMTBXGM2tKdpOoIWDNQIvJM1zOlN1",
+                "name": "Child12",
+                "title": "Child12",
+                "type": "workflow.sub_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Child12",
+                  "input": {
+                    "variable_workflow_01FTUBPVG1F9Z76v0ULO5yFHtzeUver5wpO": "test$workflow.definition_workflow_01FTUBTZ84JYO1Q0EhAPU201RbWX6Tkbpjf.input.variable_workflow_01FTUBTYTKZW44TdwJ67BhyGI7rE2UVK5mc$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "no_target": true
+                  },
+                  "workflow_id": "definition_workflow_01FTUBPW3XBXS3Pza3s52V4Z6pGNhjC8lnl"
+                },
+                "object_type": "definition_activity"
+              }
+            ],
+            "categories": [
+              "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+            ]
+          },
+          "subworkflows": [
+            {
+              "workflow": {
+                "unique_name": "definition_workflow_01FTUBPW3XBXS3Pza3s52V4Z6pGNhjC8lnl",
+                "name": "Child12",
+                "title": "Child12",
+                "type": "generic.workflow",
+                "base_type": "workflow",
+                "variables": [
+                  {
+                    "schema_id": "datatype.string",
+                    "properties": {
+                      "value": "test",
+                      "scope": "input",
+                      "name": "input-str",
+                      "type": "datatype.string",
+                      "is_required": true
+                    },
+                    "unique_name": "variable_workflow_01FTUBPVG1F9Z76v0ULO5yFHtzeUver5wpO",
+                    "object_type": "variable_workflow"
+                  }
+                ],
+                "properties": {
+                  "atomic": {
+                    "is_atomic": false
+                  },
+                  "delete_workflow_instance": false,
+                  "display_name": "Child12",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "specify_on_workflow_start": false,
+                    "target_default": true
+                  },
+                  "target": {
+                    "execute_on_target_group": false,
+                    "execute_on_workflow_target": false,
+                    "no_target": true,
+                    "specify_on_workflow_start": false
+                  }
+                },
+                "object_type": "definition_workflow",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01FTUHSHO7SGM7GCAGhkfbitL0c9U9M4yCJ",
+                    "name": "Child11",
+                    "title": "Child11",
+                    "type": "workflow.sub_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Child11",
+                      "input": {
+                        "variable_workflow_01FTUBQCSFMYQ2GliXZ1tW4Or0XX1sv3nhA": "test$workflow.definition_workflow_01FTUBPW3XBXS3Pza3s52V4Z6pGNhjC8lnl.input.variable_workflow_01FTUBPVG1F9Z76v0ULO5yFHtzeUver5wpO$"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "no_target": true
+                      },
+                      "workflow_id": "definition_workflow_01FTUBQDPTN4O1qS9zaNDjYTUkXKywfxl7V"
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ],
+                "categories": [
+                  "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                ]
+              },
+              "subworkflows": [
+                {
+                  "workflow": {
+                    "unique_name": "definition_workflow_01FTUBQDPTN4O1qS9zaNDjYTUkXKywfxl7V",
+                    "name": "Child11",
+                    "title": "Child11",
+                    "type": "generic.workflow",
+                    "base_type": "workflow",
+                    "variables": [
+                      {
+                        "schema_id": "datatype.string",
+                        "properties": {
+                          "value": "test",
+                          "scope": "input",
+                          "name": "input-str",
+                          "type": "datatype.string",
+                          "is_required": true
+                        },
+                        "unique_name": "variable_workflow_01FTUBQCSFMYQ2GliXZ1tW4Or0XX1sv3nhA",
+                        "object_type": "variable_workflow"
+                      }
+                    ],
+                    "properties": {
+                      "atomic": {
+                        "is_atomic": false
+                      },
+                      "delete_workflow_instance": false,
+                      "display_name": "Child11",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "specify_on_workflow_start": false,
+                        "target_default": true
+                      },
+                      "target": {
+                        "execute_on_target_group": false,
+                        "execute_on_workflow_target": false,
+                        "no_target": true,
+                        "specify_on_workflow_start": false
+                      }
+                    },
+                    "object_type": "definition_workflow",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01FTUHG9JJ26P7etOWycw71T9ej8PJth8Pp",
+                        "name": "Child10",
+                        "title": "Child10",
+                        "type": "workflow.sub_workflow",
+                        "base_type": "subworkflow",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Child10",
+                          "input": {
+                            "variable_workflow_01FTUBKCC008P5UtbigcbXb7YaoY1pMvvla": "test$workflow.definition_workflow_01FTUBQDPTN4O1qS9zaNDjYTUkXKywfxl7V.input.variable_workflow_01FTUBQCSFMYQ2GliXZ1tW4Or0XX1sv3nhA$"
+                          },
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "no_target": true
+                          },
+                          "workflow_id": "definition_workflow_01FTUBKCWDLYD34tWwQM6kzRKOp4YiLMFmO"
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ],
+                    "categories": [
+                      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                    ]
+                  },
+                  "subworkflows": [
+                    {
+                      "workflow": {
+                        "unique_name": "definition_workflow_01FTUBKCWDLYD34tWwQM6kzRKOp4YiLMFmO",
+                        "name": "Child10",
+                        "title": "Child10",
+                        "type": "generic.workflow",
+                        "base_type": "workflow",
+                        "variables": [
+                          {
+                            "schema_id": "datatype.string",
+                            "properties": {
+                              "value": "test",
+                              "scope": "input",
+                              "name": "input-str",
+                              "type": "datatype.string",
+                              "is_required": true
+                            },
+                            "unique_name": "variable_workflow_01FTUBKCC008P5UtbigcbXb7YaoY1pMvvla",
+                            "object_type": "variable_workflow"
+                          }
+                        ],
+                        "properties": {
+                          "atomic": {
+                            "is_atomic": false
+                          },
+                          "delete_workflow_instance": false,
+                          "display_name": "Child10",
+                          "runtime_user": {
+                            "override_target_runtime_user": false,
+                            "specify_on_workflow_start": false,
+                            "target_default": true
+                          },
+                          "target": {
+                            "execute_on_target_group": false,
+                            "execute_on_workflow_target": false,
+                            "no_target": true,
+                            "specify_on_workflow_start": false
+                          }
+                        },
+                        "object_type": "definition_workflow",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01FTUH7DVFDJS1aWll0VHmEUgrN10AJFsyq",
+                            "name": "Child9",
+                            "title": "Child9",
+                            "type": "workflow.sub_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Child9",
+                              "input": {
+                                "variable_workflow_01FTUBKP54MNS0pCQEiA836eU6PuS4k9IHz": "test$workflow.definition_workflow_01FTUBKCWDLYD34tWwQM6kzRKOp4YiLMFmO.input.variable_workflow_01FTUBKCC008P5UtbigcbXb7YaoY1pMvvla$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "no_target": true
+                              },
+                              "workflow_id": "definition_workflow_01FTUBKPJCMX31kWVSTiaJudLtGGrwCL2OP"
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ],
+                        "categories": [
+                          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                        ]
+                      },
+                      "subworkflows": [
+                        {
+                          "workflow": {
+                            "unique_name": "definition_workflow_01FTUBKPJCMX31kWVSTiaJudLtGGrwCL2OP",
+                            "name": "Child9",
+                            "title": "Child9",
+                            "type": "generic.workflow",
+                            "base_type": "workflow",
+                            "variables": [
+                              {
+                                "schema_id": "datatype.string",
+                                "properties": {
+                                  "value": "test",
+                                  "scope": "input",
+                                  "name": "input-str",
+                                  "type": "datatype.string",
+                                  "is_required": true
+                                },
+                                "unique_name": "variable_workflow_01FTUBKP54MNS0pCQEiA836eU6PuS4k9IHz",
+                                "object_type": "variable_workflow"
+                              }
+                            ],
+                            "properties": {
+                              "atomic": {
+                                "is_atomic": false
+                              },
+                              "delete_workflow_instance": false,
+                              "display_name": "Child9",
+                              "runtime_user": {
+                                "override_target_runtime_user": false,
+                                "specify_on_workflow_start": false,
+                                "target_default": true
+                              },
+                              "target": {
+                                "execute_on_target_group": false,
+                                "execute_on_workflow_target": false,
+                                "no_target": true,
+                                "specify_on_workflow_start": false
+                              }
+                            },
+                            "object_type": "definition_workflow",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01FTUFSHR67DL0IHQTnxcMkc6i7xOtekyEg",
+                                "name": "Child8",
+                                "title": "Child8",
+                                "type": "workflow.sub_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Child8",
+                                  "input": {
+                                    "variable_workflow_01FTUBENGBM027UE6darZkdxt1K56NXwVoL": "test$workflow.definition_workflow_01FTUBKPJCMX31kWVSTiaJudLtGGrwCL2OP.input.variable_workflow_01FTUBKP54MNS0pCQEiA836eU6PuS4k9IHz$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "no_target": true
+                                  },
+                                  "workflow_id": "definition_workflow_01FTUBENXUP012E67Usk4RNwLZiyi5qFTGT"
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ],
+                            "categories": [
+                              "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                            ]
+                          },
+                          "subworkflows": [
+                            {
+                              "workflow": {
+                                "unique_name": "definition_workflow_01FTUBENXUP012E67Usk4RNwLZiyi5qFTGT",
+                                "name": "Child8",
+                                "title": "Child8",
+                                "type": "generic.workflow",
+                                "base_type": "workflow",
+                                "variables": [
+                                  {
+                                    "schema_id": "datatype.string",
+                                    "properties": {
+                                      "value": "test",
+                                      "scope": "input",
+                                      "name": "input-str",
+                                      "type": "datatype.string",
+                                      "is_required": true
+                                    },
+                                    "unique_name": "variable_workflow_01FTUBENGBM027UE6darZkdxt1K56NXwVoL",
+                                    "object_type": "variable_workflow"
+                                  }
+                                ],
+                                "properties": {
+                                  "atomic": {
+                                    "is_atomic": false
+                                  },
+                                  "delete_workflow_instance": false,
+                                  "display_name": "Child8",
+                                  "runtime_user": {
+                                    "override_target_runtime_user": false,
+                                    "specify_on_workflow_start": false,
+                                    "target_default": true
+                                  },
+                                  "target": {
+                                    "execute_on_target_group": false,
+                                    "execute_on_workflow_target": false,
+                                    "no_target": true,
+                                    "specify_on_workflow_start": false
+                                  }
+                                },
+                                "object_type": "definition_workflow",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01FTUFGILJ7XY1iZWenKAWDgnEM8vE5S6r4",
+                                    "name": "Child7",
+                                    "title": "Child7",
+                                    "type": "workflow.sub_workflow",
+                                    "base_type": "subworkflow",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Child7",
+                                      "input": {
+                                        "variable_workflow_01FTUB38DJW0D6a1C0VQ2HalZshjoBHENXJ": "test$workflow.definition_workflow_01FTUBENXUP012E67Usk4RNwLZiyi5qFTGT.input.variable_workflow_01FTUBENGBM027UE6darZkdxt1K56NXwVoL$"
+                                      },
+                                      "runtime_user": {
+                                        "target_default": true
+                                      },
+                                      "skip_execution": false,
+                                      "target": {
+                                        "no_target": true
+                                      },
+                                      "workflow_id": "definition_workflow_01FTUB3901EA854IU5grbGmCveidsk5cUrJ"
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ],
+                                "categories": [
+                                  "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                ]
+                              },
+                              "subworkflows": [
+                                {
+                                  "workflow": {
+                                    "unique_name": "definition_workflow_01FTUB3901EA854IU5grbGmCveidsk5cUrJ",
+                                    "name": "Child7",
+                                    "title": "Child7",
+                                    "type": "generic.workflow",
+                                    "base_type": "workflow",
+                                    "variables": [
+                                      {
+                                        "schema_id": "datatype.string",
+                                        "properties": {
+                                          "value": "test",
+                                          "scope": "input",
+                                          "name": "input-str",
+                                          "type": "datatype.string",
+                                          "is_required": true
+                                        },
+                                        "unique_name": "variable_workflow_01FTUB38DJW0D6a1C0VQ2HalZshjoBHENXJ",
+                                        "object_type": "variable_workflow"
+                                      }
+                                    ],
+                                    "properties": {
+                                      "atomic": {
+                                        "is_atomic": false
+                                      },
+                                      "delete_workflow_instance": false,
+                                      "display_name": "Child7",
+                                      "runtime_user": {
+                                        "override_target_runtime_user": false,
+                                        "specify_on_workflow_start": false,
+                                        "target_default": true
+                                      },
+                                      "target": {
+                                        "execute_on_target_group": false,
+                                        "execute_on_workflow_target": false,
+                                        "no_target": true,
+                                        "specify_on_workflow_start": false
+                                      }
+                                    },
+                                    "object_type": "definition_workflow",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01FTUEON09SWK1Ii5MwZGCgCBVfb7LtcFF9",
+                                        "name": "Child6",
+                                        "title": "Child6",
+                                        "type": "workflow.sub_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Child6",
+                                          "input": {
+                                            "variable_workflow_01FTUBDOF1TP804Q2y8t6ju6sFmLX6MgrVs": "test$workflow.definition_workflow_01FTUB3901EA854IU5grbGmCveidsk5cUrJ.input.variable_workflow_01FTUB38DJW0D6a1C0VQ2HalZshjoBHENXJ$"
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "no_target": true
+                                          },
+                                          "workflow_id": "definition_workflow_01FTUBDQMM5UP1o9apvwVtDwlLIqSqeVANr"
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ],
+                                    "categories": [
+                                      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                    ]
+                                  },
+                                  "subworkflows": [
+                                    {
+                                      "workflow": {
+                                        "unique_name": "definition_workflow_01FTUBDQMM5UP1o9apvwVtDwlLIqSqeVANr",
+                                        "name": "Child6",
+                                        "title": "Child6",
+                                        "type": "generic.workflow",
+                                        "base_type": "workflow",
+                                        "variables": [
+                                          {
+                                            "schema_id": "datatype.string",
+                                            "properties": {
+                                              "value": "test",
+                                              "scope": "input",
+                                              "name": "input-str",
+                                              "type": "datatype.string",
+                                              "is_required": true
+                                            },
+                                            "unique_name": "variable_workflow_01FTUBDOF1TP804Q2y8t6ju6sFmLX6MgrVs",
+                                            "object_type": "variable_workflow"
+                                          }
+                                        ],
+                                        "properties": {
+                                          "atomic": {
+                                            "is_atomic": false
+                                          },
+                                          "delete_workflow_instance": false,
+                                          "display_name": "Child6",
+                                          "runtime_user": {
+                                            "override_target_runtime_user": false,
+                                            "specify_on_workflow_start": false,
+                                            "target_default": true
+                                          },
+                                          "target": {
+                                            "execute_on_target_group": false,
+                                            "execute_on_workflow_target": false,
+                                            "no_target": true,
+                                            "specify_on_workflow_start": false
+                                          }
+                                        },
+                                        "object_type": "definition_workflow",
+                                        "actions": [
+                                          {
+                                            "unique_name": "definition_activity_01FTUEAVVQIQ41xPtM3MzKUGhlx7gn9otht",
+                                            "name": "Child5",
+                                            "title": "Child5",
+                                            "type": "workflow.sub_workflow",
+                                            "base_type": "subworkflow",
+                                            "properties": {
+                                              "continue_on_failure": false,
+                                              "display_name": "Child5",
+                                              "input": {
+                                                "variable_workflow_01FTUB2HYZDH431Bp43G1ZqD8TO3o87YsBU": "test$workflow.definition_workflow_01FTUBDQMM5UP1o9apvwVtDwlLIqSqeVANr.input.variable_workflow_01FTUBDOF1TP804Q2y8t6ju6sFmLX6MgrVs$"
+                                              },
+                                              "runtime_user": {
+                                                "target_default": true
+                                              },
+                                              "skip_execution": false,
+                                              "target": {
+                                                "no_target": true
+                                              },
+                                              "workflow_id": "definition_workflow_01FTUB2W1TEI43THzEJNOiByzshDMGxyqKr"
+                                            },
+                                            "object_type": "definition_activity"
+                                          }
+                                        ],
+                                        "categories": [
+                                          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                        ]
+                                      },
+                                      "subworkflows": [
+                                        {
+                                          "workflow": {
+                                            "unique_name": "definition_workflow_01FTUB2W1TEI43THzEJNOiByzshDMGxyqKr",
+                                            "name": "Child5",
+                                            "title": "Child5",
+                                            "type": "generic.workflow",
+                                            "base_type": "workflow",
+                                            "variables": [
+                                              {
+                                                "schema_id": "datatype.string",
+                                                "properties": {
+                                                  "value": "test",
+                                                  "scope": "input",
+                                                  "name": "input-str",
+                                                  "type": "datatype.string",
+                                                  "is_required": true
+                                                },
+                                                "unique_name": "variable_workflow_01FTUB2HYZDH431Bp43G1ZqD8TO3o87YsBU",
+                                                "object_type": "variable_workflow"
+                                              }
+                                            ],
+                                            "properties": {
+                                              "atomic": {
+                                                "is_atomic": false
+                                              },
+                                              "delete_workflow_instance": false,
+                                              "display_name": "Child5",
+                                              "runtime_user": {
+                                                "override_target_runtime_user": false,
+                                                "specify_on_workflow_start": false,
+                                                "target_default": true
+                                              },
+                                              "target": {
+                                                "execute_on_target_group": false,
+                                                "execute_on_workflow_target": false,
+                                                "no_target": true,
+                                                "specify_on_workflow_start": false
+                                              }
+                                            },
+                                            "object_type": "definition_workflow",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01FTUDVM4Z2UU1lxE0qL7ojpdLOsCVmDqXT",
+                                                "name": "Child4",
+                                                "title": "Child4",
+                                                "type": "workflow.sub_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "Child4",
+                                                  "input": {
+                                                    "variable_workflow_01FTUAG8J2WCZ3zl5txKnvnCBErA17nNBHg": "test$workflow.definition_workflow_01FTUB2W1TEI43THzEJNOiByzshDMGxyqKr.input.variable_workflow_01FTUB2HYZDH431Bp43G1ZqD8TO3o87YsBU$"
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "no_target": true
+                                                  },
+                                                  "workflow_id": "definition_workflow_01FTUAG90Y4SF3lKjIwBrsyI7fqfcYGntze"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ],
+                                            "categories": [
+                                              "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                            ]
+                                          },
+                                          "subworkflows": [
+                                            {
+                                              "workflow": {
+                                                "unique_name": "definition_workflow_01FTUAG90Y4SF3lKjIwBrsyI7fqfcYGntze",
+                                                "name": "Child4",
+                                                "title": "Child4",
+                                                "type": "generic.workflow",
+                                                "base_type": "workflow",
+                                                "variables": [
+                                                  {
+                                                    "schema_id": "datatype.string",
+                                                    "properties": {
+                                                      "value": "test",
+                                                      "scope": "input",
+                                                      "name": "input-str",
+                                                      "type": "datatype.string",
+                                                      "is_required": true
+                                                    },
+                                                    "unique_name": "variable_workflow_01FTUAG8J2WCZ3zl5txKnvnCBErA17nNBHg",
+                                                    "object_type": "variable_workflow"
+                                                  }
+                                                ],
+                                                "properties": {
+                                                  "atomic": {
+                                                    "is_atomic": false
+                                                  },
+                                                  "delete_workflow_instance": false,
+                                                  "display_name": "Child4",
+                                                  "runtime_user": {
+                                                    "override_target_runtime_user": false,
+                                                    "specify_on_workflow_start": false,
+                                                    "target_default": true
+                                                  },
+                                                  "target": {
+                                                    "execute_on_target_group": false,
+                                                    "execute_on_workflow_target": false,
+                                                    "no_target": true,
+                                                    "specify_on_workflow_start": false
+                                                  }
+                                                },
+                                                "object_type": "definition_workflow",
+                                                "actions": [
+                                                  {
+                                                    "unique_name": "definition_activity_01FTUDFYRJT8B4l49uWtvNqcBzfGs4XtiPT",
+                                                    "name": "Child3",
+                                                    "title": "Child3",
+                                                    "type": "workflow.sub_workflow",
+                                                    "base_type": "subworkflow",
+                                                    "properties": {
+                                                      "continue_on_failure": false,
+                                                      "display_name": "Child3",
+                                                      "input": {
+                                                        "variable_workflow_01FTUAGMLWXDH1qzHlOwsui7Np0KRBj6QNX": "test$workflow.definition_workflow_01FTUAG90Y4SF3lKjIwBrsyI7fqfcYGntze.input.variable_workflow_01FTUAG8J2WCZ3zl5txKnvnCBErA17nNBHg$"
+                                                      },
+                                                      "runtime_user": {
+                                                        "target_default": true
+                                                      },
+                                                      "skip_execution": false,
+                                                      "target": {
+                                                        "no_target": true
+                                                      },
+                                                      "workflow_id": "definition_workflow_01FTUAHC98W255YJSiyhaWh1uQnoDAAuI2S"
+                                                    },
+                                                    "object_type": "definition_activity"
+                                                  }
+                                                ],
+                                                "categories": [
+                                                  "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                                ]
+                                              },
+                                              "subworkflows": [
+                                                {
+                                                  "workflow": {
+                                                    "unique_name": "definition_workflow_01FTUAHC98W255YJSiyhaWh1uQnoDAAuI2S",
+                                                    "name": "Child3",
+                                                    "title": "Child3",
+                                                    "type": "generic.workflow",
+                                                    "base_type": "workflow",
+                                                    "variables": [
+                                                      {
+                                                        "schema_id": "datatype.string",
+                                                        "properties": {
+                                                          "value": "test",
+                                                          "scope": "input",
+                                                          "name": "input-str",
+                                                          "type": "datatype.string",
+                                                          "is_required": true
+                                                        },
+                                                        "unique_name": "variable_workflow_01FTUAGMLWXDH1qzHlOwsui7Np0KRBj6QNX",
+                                                        "object_type": "variable_workflow"
+                                                      }
+                                                    ],
+                                                    "properties": {
+                                                      "atomic": {
+                                                        "is_atomic": false
+                                                      },
+                                                      "delete_workflow_instance": false,
+                                                      "display_name": "Child3",
+                                                      "runtime_user": {
+                                                        "override_target_runtime_user": false,
+                                                        "specify_on_workflow_start": false,
+                                                        "target_default": true
+                                                      },
+                                                      "target": {
+                                                        "execute_on_target_group": false,
+                                                        "execute_on_workflow_target": false,
+                                                        "no_target": true,
+                                                        "specify_on_workflow_start": false
+                                                      }
+                                                    },
+                                                    "object_type": "definition_workflow",
+                                                    "actions": [
+                                                      {
+                                                        "unique_name": "definition_activity_01FTUCY8I30VB3BqlgXYN5MbGuGcqL5719v",
+                                                        "name": "Child2",
+                                                        "title": "Child2",
+                                                        "type": "workflow.sub_workflow",
+                                                        "base_type": "subworkflow",
+                                                        "properties": {
+                                                          "continue_on_failure": false,
+                                                          "display_name": "Child2",
+                                                          "input": {
+                                                            "variable_workflow_01FTU90LYCT8N6SjRUQThFOzzV39RRzT6c4": "test$workflow.definition_workflow_01FTUAHC98W255YJSiyhaWh1uQnoDAAuI2S.input.variable_workflow_01FTUAGMLWXDH1qzHlOwsui7Np0KRBj6QNX$"
+                                                          },
+                                                          "runtime_user": {
+                                                            "target_default": true
+                                                          },
+                                                          "skip_execution": false,
+                                                          "target": {
+                                                            "no_target": true
+                                                          },
+                                                          "workflow_id": "definition_workflow_01FTU916QIJXR72DvkYvt7uOpITbUHIRvsr"
+                                                        },
+                                                        "object_type": "definition_activity"
+                                                      }
+                                                    ],
+                                                    "categories": [
+                                                      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                                    ]
+                                                  },
+                                                  "subworkflows": [
+                                                    {
+                                                      "workflow": {
+                                                        "unique_name": "definition_workflow_01FTU916QIJXR72DvkYvt7uOpITbUHIRvsr",
+                                                        "name": "Child2",
+                                                        "title": "Child2",
+                                                        "type": "generic.workflow",
+                                                        "base_type": "workflow",
+                                                        "variables": [
+                                                          {
+                                                            "schema_id": "datatype.string",
+                                                            "properties": {
+                                                              "value": "test",
+                                                              "scope": "input",
+                                                              "name": "input-str",
+                                                              "type": "datatype.string",
+                                                              "is_required": true
+                                                            },
+                                                            "unique_name": "variable_workflow_01FTU90LYCT8N6SjRUQThFOzzV39RRzT6c4",
+                                                            "object_type": "variable_workflow"
+                                                          }
+                                                        ],
+                                                        "properties": {
+                                                          "atomic": {
+                                                            "is_atomic": false
+                                                          },
+                                                          "delete_workflow_instance": false,
+                                                          "display_name": "Child2",
+                                                          "runtime_user": {
+                                                            "override_target_runtime_user": false,
+                                                            "specify_on_workflow_start": false,
+                                                            "target_default": true
+                                                          },
+                                                          "target": {
+                                                            "execute_on_target_group": false,
+                                                            "execute_on_workflow_target": false,
+                                                            "no_target": true,
+                                                            "specify_on_workflow_start": false
+                                                          }
+                                                        },
+                                                        "object_type": "definition_workflow",
+                                                        "actions": [
+                                                          {
+                                                            "unique_name": "definition_activity_01FTU9QJF1W0C77XODR9VI2hulnhC4jNnzc",
+                                                            "name": "Child1",
+                                                            "title": "Child1",
+                                                            "type": "workflow.sub_workflow",
+                                                            "base_type": "subworkflow",
+                                                            "properties": {
+                                                              "continue_on_failure": false,
+                                                              "display_name": "Child1",
+                                                              "input": {
+                                                                "variable_workflow_01FTU3CSQJ3A657w0ZyTOhi3YWoQOofsUqg": "$workflow.definition_workflow_01FTU916QIJXR72DvkYvt7uOpITbUHIRvsr.input.variable_workflow_01FTU90LYCT8N6SjRUQThFOzzV39RRzT6c4$"
+                                                              },
+                                                              "runtime_user": {
+                                                                "target_default": true
+                                                              },
+                                                              "skip_execution": false,
+                                                              "target": {
+                                                                "no_target": true
+                                                              },
+                                                              "workflow_id": "definition_workflow_01FTU2Q3XQE485N93gw6eQBfo0ysjIYwzWp"
+                                                            },
+                                                            "object_type": "definition_activity"
+                                                          }
+                                                        ],
+                                                        "categories": [
+                                                          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                                        ]
+                                                      },
+                                                      "subworkflows": [
+                                                        {
+                                                          "workflow": {
+                                                            "unique_name": "definition_workflow_01FTU2Q3XQE485N93gw6eQBfo0ysjIYwzWp",
+                                                            "name": "Child1",
+                                                            "title": "Child1",
+                                                            "type": "generic.workflow",
+                                                            "base_type": "workflow",
+                                                            "variables": [
+                                                              {
+                                                                "schema_id": "datatype.string",
+                                                                "properties": {
+                                                                  "value": "test",
+                                                                  "scope": "input",
+                                                                  "name": "input-str",
+                                                                  "type": "datatype.string",
+                                                                  "is_required": true
+                                                                },
+                                                                "unique_name": "variable_workflow_01FTU3CSQJ3A657w0ZyTOhi3YWoQOofsUqg",
+                                                                "object_type": "variable_workflow"
+                                                              }
+                                                            ],
+                                                            "properties": {
+                                                              "atomic": {
+                                                                "is_atomic": false
+                                                              },
+                                                              "delete_workflow_instance": false,
+                                                              "display_name": "Child1",
+                                                              "runtime_user": {
+                                                                "override_target_runtime_user": false,
+                                                                "specify_on_workflow_start": false,
+                                                                "target_default": true
+                                                              },
+                                                              "target": {
+                                                                "execute_on_target_group": false,
+                                                                "execute_on_workflow_target": false,
+                                                                "no_target": true,
+                                                                "specify_on_workflow_start": false
+                                                              }
+                                                            },
+                                                            "object_type": "definition_workflow",
+                                                            "actions": [
+                                                              {
+                                                                "unique_name": "definition_activity_01FTU33Q1L7XA4krM5YGxMLHXcCfGHW59Jm",
+                                                                "name": "To Upper",
+                                                                "title": "To Upper",
+                                                                "type": "core.string2upper",
+                                                                "base_type": "activity",
+                                                                "properties": {
+                                                                  "continue_on_failure": false,
+                                                                  "display_name": "To Upper",
+                                                                  "skip_execution": false,
+                                                                  "source": "$workflow.definition_workflow_01FTU2Q3XQE485N93gw6eQBfo0ysjIYwzWp.input.variable_workflow_01FTU3CSQJ3A657w0ZyTOhi3YWoQOofsUqg$"
+                                                                },
+                                                                "object_type": "definition_activity"
+                                                              }
+                                                            ],
+                                                            "categories": [
+                                                              "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
